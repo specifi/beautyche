@@ -18,3 +18,4 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-rails'
+gem 'activeadmin', github: 'gregbell/active_admin'
