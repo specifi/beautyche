@@ -1,31 +1,37 @@
+<div class="container-fluid products">
 <div class="row">
-      <% 12.times do %>
-      <% @products.each do |product| %>
-      <!-- PROD GRID
-      ============================================================ -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <% 12.times do %>
+          <% @products.each do |product| %>
+          <!-- PROD GRID
+          ============================================================ -->
 
-      <!-- PROD. ITEM -->
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <!-- IMAGE CONTAINER-->
-          <%= image_tag(product.image.url(:square)) %>
-          <!--END IMAGE CONTAINER-->
-          <!-- CAPTION -->
-          <div class="caption">
-          <h3 class=""><%= product.name %></h3>
-            <p class=""><%= product.description %></p>
+          <!-- PROD. ITEM -->
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <!-- IMAGE CONTAINER-->
+              <img alt="Mbsglutaxq102" src="http://beautyche.s3.amazonaws.com/products/images/000/000/001/square/mbsglutaxq102.jpg?1406215177">
+              <% image_tag(product.image.url(:square)) %>
+              <!--END IMAGE CONTAINER-->
+              <!-- CAPTION -->
+              <div class="caption">
+              <h4 class=""><%= product.name %></h4>
+                <p class="text-muted"><%= product.description %></p>
 
-            <div class="row">
-              <div class="col-md-6">
-                <p class="lead"><%= product.price %></p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="lead"><%= product.price %></p>
+                  </div>
+                </div>
               </div>
+              <!--END CAPTION -->
             </div>
+            <!-- END: THUMBNAIL -->
           </div>
-          <!--END CAPTION -->
+          <!-- PROD. ITEM -->
+          <% end %>
+          <% end %>
         </div>
-        <!-- END: THUMBNAIL -->
-      </div>
-      <!-- PROD. ITEM -->
-      <% end %>
-      <% end %>
+
+</div>
 </div>
