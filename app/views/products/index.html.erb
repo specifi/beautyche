@@ -1,7 +1,10 @@
-<div class="container-fluid products">
-<div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <% 12.times do %>
+<div class="bs-docs-header products-header" id="content">
+  <div class="container">
+    <h3><i class="fa fa-archive"></i> Products</h3>
+  </div>
+</div>
+   <div class="row-fluid products-list">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main products-list">
           <% @products.each do |product| %>
           <!-- PROD GRID
           ============================================================ -->
@@ -15,12 +18,15 @@
               <!--END IMAGE CONTAINER-->
               <!-- CAPTION -->
               <div class="caption">
-              <h4 class=""><%= product.name %></h4>
+                <h4 class=""><%= product.name %></h4>
                 <p class="text-muted"><%= product.description %></p>
 
                 <div class="row">
                   <div class="col-md-6">
                     <p class="lead"><%= product.price %></p>
+                  </div>
+                  <div class="col-md-6">
+                    <a class="btn btn-success btn-block" href="#">Add to cart</a>
                   </div>
                 </div>
               </div>
@@ -29,7 +35,6 @@
             <!-- END: THUMBNAIL -->
           </div>
           <!-- PROD. ITEM -->
-          <% end %>
           <% end %>
         </div>
 
